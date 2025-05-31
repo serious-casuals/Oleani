@@ -29,7 +29,7 @@ This project serves as a practical testbed for AI-driven development workflows, 
 
 Oleani leverages a modern .NET stack and focuses on high-performance and asynchronous operations:
 
-*   🚀 **.NET 9 (Preview/Target):** Utilizing the latest features and performance improvements from the .NET platform.
+*   🚀 **.NET 9 (PLANNED .NET 10):** Utilizing the latest features and performance improvements from the .NET platform.
 *   **C#:** The primary programming language.
 *   ⚡ **Asynchronous Programming (`async`/`await`):** Heavily used for non-blocking I/O and responsive applications.
 *   🌊 **`System.IO.Pipelines` / `Channels`:** For efficient, low-allocation stream processing and message passing.
