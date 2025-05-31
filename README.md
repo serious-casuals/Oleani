@@ -36,7 +36,7 @@ Oleani leverages a modern .NET stack and focuses on high-performance and asynchr
 *   🌊 **`System.IO.Pipelines` / `Channels`:** For efficient, low-allocation stream processing and message passing.
 *   🧠 **`Span<T>` and `Memory<T>`:** For high-performance, allocation-free memory manipulation.
 *   📝 **ZLogger:** A high-performance, structured logging library for .NET.
-*   🤖 **AI Code Generation Tools:** Various AI models (e.g., GPT-*, Copilot, etc. - *specify if you wish*) were used as aids during the GoLang to .NET migration process, with subsequent manual review and refinement.
+*   🤖 **AI Code Generation Tools:** Various AI models (e.g., GPT-*, Claude 4, Gemini 2.5 Pro) were used as aids during the GoLang to .NET migration process, with subsequent manual review and refinement.
 
 ## 🎯 Project Goals & Philosophy
 
