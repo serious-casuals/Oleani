@@ -23,7 +23,6 @@ This project serves as a practical testbed for AI-driven development workflows, 
     *   [LNet Library](#lnet-library)
     *   [Gemstone IV Library](#gemstone-iv-library)
     *   [Discord Library (Future)](#discord-library-future)
-*   [Contributing (Note)](#contributing-note)
 *   [Disclaimer](#disclaimer)
 
 ## 🛠️ Technologies Used
