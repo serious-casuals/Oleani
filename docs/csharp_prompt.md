@@ -89,5 +89,3 @@ Analyze the provided C# codebase and generate comprehensive documentation.
 *   **Infer Intelligently:** Make educated guesses based on naming conventions, code structure, and common practices, but clearly label them as assumptions.
 *   **Be Practical:** The goal is useful, actionable documentation for developers.
 *   **Propose a "Getting Started / Local Setup" Section:** Based on your analysis, outline likely steps for a new developer to set up the project locally (required tools, DB setup hints, key config). This will be speculative but helpful.
-
-This enhanced prompt should give the AI a much clearer directive and help it produce more valuable documentation, especially when dealing with an unknown legacy system.
