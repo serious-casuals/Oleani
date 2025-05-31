@@ -187,38 +187,44 @@ Lich is typically initiated in one of the following ways:
 
 ```mermaid
 graph TD
-    A[User's Game Client (e.g., Stormfront)] <-->|TCP to Lich Port| B(Lich Core);
-    B <-->|SSL/TCP| C[Simu EAccess Server];
-    B <-->|TCP| D[Simu Game Server (e.g., GSIV)];
+    %% Outer connections
+    A[User's Game Client] -- TCP to Lich Port --> B(Lich Core)
+    B -- SSL/TCP --> C[Simu EAccess Server]
+    B -- TCP --> D[Simu Game Server]
 
-    subgraph Lich Core
-        E[@main_thread] --> F[Login Logic / GUI];
-        F --> G[EAccess Module];
-        G --> C;
-        E --> H[Game Module];
-        H --> D;
-        H --> I[XMLData Parser];
-        D --> I;
-        I --> J[Infomon/Effects/Skills (GSIV)];
-        J --> K[infomon.db / lich.db3];
-        E --> L[Client Thread];
-        A --> L;
-        L --> M[do_client handler];
-        M --> H; subgraph Game Command
-        M --> N[Script Engine]; subgraph Lich Command
-        N --> O[Running Scripts];
-        O --> P[Lich API (fput, waitfor, XMLData, etc.)];
-        P --> M;
-        P --> I;
-        I --> P;
-        O --> Q[Settings/Vars Modules];
-        Q --> K;
-        O <--> R[Map Module];
-        R --> S[Map Database Files];
-        P --> T[Hooks (Up/Downstream)];
-        I --> T;
-        T --> A; 
-        H --> T;
+    %% Lich Core internal structure
+    subgraph Lich_Core [Lich Core]
+        E[main_thread] --> F[Login Logic / GUI]
+        F --> G[EAccess Module]
+        G --> C
+        E --> H[Game Module]
+        H --> D
+        H --> I[XMLData Parser]
+        D --> I
+        I --> J[Infomon/Effects/Skills]
+        J --> K[infomon.db / lich.db3]
+        E --> L[Client Thread]
+        A --> L
+        L --> M[do_client handler]
+        M --> H
+
+        %% Game Command
+        M --> N[Script Engine]
+
+        %% Lich Command
+        N --> O[Running Scripts]
+        O --> P[Lich API fput, waitfor, XMLData, etc]
+        P --> M
+        P --> I
+        I --> P
+        O --> Q[Settings/Vars Modules]
+        Q --> K
+        O <--> R[Map Module]
+        R --> S[Map Database Files]
+        P --> T[Hooks Up/Downstream]
+        I --> T
+        H --> T
+        T --> A
     end
 ```
 
