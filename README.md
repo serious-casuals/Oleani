@@ -58,7 +58,7 @@ Oleani leverages a modern .NET stack and focuses on high-performance and asynchr
 
 ### 🌐 LNet Library
 
-*   **Purpose:** Connect to LNet (Lich KTS Network), primarily used by Gemstone IV players.
+*   **Purpose:** Connect to LNet, primarily used by Gemstone IV players.
 *   **Features:**
     *   Connection management (SSL/TLS)
     *   Sending and receiving XML-based LNet messages
